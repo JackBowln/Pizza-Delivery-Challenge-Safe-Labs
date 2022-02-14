@@ -15,7 +15,7 @@ To run the development server
     yarn dev
 
 ## Report
-![screenshot](https://github.com/JackBowln/Pizza-Delivery-Challenge-Safe-Labs/blob/main/screenshot.png)
+![screenshot](/screenshot.png)
 
 I really enjoy doing challenges like this, by the way programming is so enjoyable to me, mainly to test my basic knowledge and I always try to apply new ideas in each project because I am always keeping up to date. In this case I used [Vite](https://vitejs.dev), as a new package manager, an alternative to webpack and create-react-app, I found it an enriching experience! Besides that I also used the component library "chakra UI", and axios to receive http calls
 
