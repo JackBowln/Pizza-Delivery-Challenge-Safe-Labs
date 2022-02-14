@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+footer#footer {
+    @include flexbox($justifyContent: center);
+    background-color: #121212;
+    height: 60px;
+    padding: 10px;
+    ul {
+        @include flexbox($justifyContent: space-evenly);
+        width: 600px;
+        li {
+            color: $white;
+            align-self: center;
+        }
+    }
+}

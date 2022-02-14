@@ -1,0 +1,152 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @param {Bool} $self [false] - Whether or not to include current selector
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    } @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin container($width) {
+    max-width: $width;
+    width: 100%;
+    margin-inline: auto;
+
+    @include mq(phone) {
+        max-width: 100%;
+        margin-inline: 20px;
+    }
+}
+
+/// Make a context based selector a little more friendly
+/// @param {String} $context
+@mixin when-inside($context) {
+    #{$context} & {
+        @content;
+    }
+}
+
+@mixin pseudo($content: "", $display: block, $pos: absolute) {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin mq($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width + 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin font($size: false, $color: false, $weight: false, $lh: false) {
+    font-family: "Montserrat Alternates", sans-serif;
+    @if $size {
+        font-size: $size;
+    }
+    @if $color {
+        color: $color;
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+    @if $lh {
+        line-height: $lh;
+    }
+}
+
+@mixin flexbox(
+    $display: flex,
+    $direction: row,
+    $placeContent: null,
+    $placeItems: null,
+    $wrap: nowrap,
+    $shrink: 0,
+    $grow: 0,
+    $alignContent: null,
+    $justifyContent: null,
+    $alignItems: null,
+    $justifyItems: null,
+    $gap: 20px
+) {
+    display: $display;
+    flex-direction: $direction;
+
+    @if $placeContent == null {
+        @if $alignContent {
+            align-content: $alignContent;
+        }
+        @if $justifyContent {
+            justify-content: $justifyContent;
+        }
+    } @else {
+        place-content: $placeContent;
+    }
+
+    @if $placeItems == null {
+        @if $alignItems {
+            align-items: $alignItems;
+        }
+        @if $justifyItems {
+            justify-items: $justifyItems;
+        }
+    } @else {
+        place-items: $placeItems;
+    }
+    gap: $gap;
+    flex-wrap: $wrap;
+    flex-shrink: $shrink;
+    flex-grow: $grow;
+}
+@mixin grid($type, $rows) {
+    display: grid;
+    @if $type == "column" {
+        @if type-of($rows) == "number" {
+            grid-template-columns: repeat($rows, 1fr);
+        } @else {
+            grid-template-columns: $rows;
+        }
+    } @else {
+        @if length($rows) <= 2 {
+            grid-template-rows: repeat($rows, 1fr);
+        } @else {
+            grid-template-rows: $rows;
+        }
+    }
+}

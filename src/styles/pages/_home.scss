@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+#main {
+    .swiper-slide {
+        // img {
+        //     width: 100%;
+        //     height: auto;
+        //     filter: brightness(0.4);
+        // }
+        .cta-title {
+            @include font();
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            color: white;
+            text-transform: uppercase;
+            top: 150px;
+            font-size: 30px;
+            font-weight: bold;
+            width: 380px;
+            text-align: center;
+            // background: black;
+            // padding: 20px;
+            z-index: 9;
+            border-radius: 6px;
+        }
+        .chakra-button {
+            position: absolute;
+            top: 380px;
+            z-index: 1;
+            left: 50%;
+            transform: translatex(-50%);
+            width: 160px;
+            height: 40px;
+            color: white;
+            background-color: #121212;
+            border: 1px solid #992;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 500ms;
+            cursor: pointer;
+            border-radius: 5px;
+            &:hover {
+                color: #121212;
+                background-color: rgb(245, 248, 51);
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Montserrat', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+
+/// @type Color
+
+$primary:#ad1518;
+$primaryDark:#6f2422;
+
+$dark:#000000;
+$neutralDarker: #626467;
+$neutralDark:#707070;
+$neutral:#E7E4E4;
+$neutralLight: #d4d4d4;
+$neutralLighter: #f0f0f0;
+$neutralLightest: #f4f4f4;
+$white: #ffffff;
+
+/// Copy text color
+/// @type Color
+$text-color: $neutralDark !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: $primary !default;
+
+/// Light grey
+/// @type Color
+$light-grey: $neutralLighter !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: $neutralDark !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: $neutralDarker !default;
+
+
+/// Container's maximum width
+/// @type Length
+$container-max-width: 1250px !default;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "phone":        425px,
+  "tablet-small": 568px,
+  "tablet":       768px,
+  "tablet-wide":  1024px,
+  "desktop":      1248px,
+  "desktop-wide": 1440px
+);
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

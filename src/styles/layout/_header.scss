@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header#header {
+    // padding-block: 10px;
+    // background-color: #121212;
+    // @include flexbox($justifyContent: center);
+   .chakra-image {
+       width: auto;
+       height: 60px;
+   }
+}
