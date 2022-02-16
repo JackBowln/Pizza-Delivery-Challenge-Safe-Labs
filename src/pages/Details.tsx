@@ -28,7 +28,6 @@ const Details = (props: any) => {
 
     let navigate = useNavigate()
 
-    // const item = JSON.parse(localStorage.getItem("item") as string)
     const orderItems = JSON.parse(localStorage.getItem("order") as string)
 
     const [cartItems, setCartItems] = useState<any>([])
@@ -72,7 +71,6 @@ const Details = (props: any) => {
     useEffect(() => {
         const fetchResults = async () => {
             const resultsData = await getResults()
-            console.log(resultsData.data)
             setResults(resultsData.data)
         }
         fetchResults()

@@ -1,35 +1,3 @@
-// import React from "react"
-// import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa"
-// import { Button, HStack, Link } from "@chakra-ui/react"
-// const Footer = () => {
-//     return (
-//         <footer id="footer">
-//             <ul>
-//                 <HStack>
-// <Link
-//     href="https://api.whatsapp.com/send/?phone=5527999571114&text=Olá, gostaria de fazer um pedido"
-//     isExternal
-// >
-//     <Button
-//         colorScheme="whatsapp"
-//         leftIcon={<FaWhatsapp />}
-//     >
-//         +55(27)99957-1114
-//     </Button>
-// </Link>
-//                     <Button colorScheme="facebook" leftIcon={<FaFacebook />}>
-//                         Facebook
-//                     </Button>
-//                     <Button colorScheme="twitter" leftIcon={<FaTwitter />}>
-//                         Twitter
-//                     </Button>
-//                 </HStack>
-//             </ul>
-//         </footer>
-//     )
-// }
-
-// export default Footer
 
 import { ReactNode } from "react"
 import {
@@ -45,9 +13,6 @@ import {
     Button,
 } from "@chakra-ui/react"
 import { FaTwitter, FaYoutube, FaInstagram, FaWhatsapp } from "react-icons/fa"
-
-// import AppStoreBadge from '@/components/AppStoreBadge';
-// import PlayStoreBadge from '@/components/PlayStoreBadge';
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
     return (

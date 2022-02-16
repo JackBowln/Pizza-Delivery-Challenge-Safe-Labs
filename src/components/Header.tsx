@@ -3,14 +3,8 @@ import logo from "../assets/logo.png"
 import {
     Box,
     Flex,
-    Avatar,
     Link,
     Button,
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    MenuDivider,
     useDisclosure,
     useColorModeValue,
     Stack,
@@ -20,8 +14,6 @@ import {
     Heading,
 } from "@chakra-ui/react"
 import { MoonIcon, SunIcon, WarningTwoIcon } from "@chakra-ui/icons"
-import { FaShoppingCart } from "react-icons/fa"
-import { useLocation } from "react-router-dom"
 
 const NavLink = ({ children }: { children: ReactNode }) => (
     <Link

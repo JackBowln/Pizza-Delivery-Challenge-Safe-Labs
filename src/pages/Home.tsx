@@ -12,7 +12,6 @@ const Home = () => {
     useEffect(() => {
         const fetchPizzaData = async () => {
             const pizzaData = await getPizzas()
-            console.log(pizzaData.data)
             setPizzas(pizzaData.data)
         }
         fetchPizzaData()
